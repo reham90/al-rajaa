@@ -413,7 +413,7 @@ font-size: 15px;
     position: fixed;
     width: 100%;
     height: 0;
-    background: linear-gradient( 0deg, rgb(227,134,21) 0%, rgb(241,220,0) 100%);
+    background: #000;
     display: flex;
     align-items: center;
     justify-content: center;
