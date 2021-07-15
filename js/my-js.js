@@ -6,9 +6,9 @@ $(document).ready(function() {
   $(function() { // DOM ready
     // If a link has a dropdown, add sub menu toggle.
     $('nav ul li a:not(:only-child)').hover(function(e) {
-      $(this).siblings('.nav-dropdown').slideDown();
+      $(this).siblings('.nav-dropdown').css("display" ,"block");
       // Close one dropdown when selecting another
-      
+    
       e.stopPropagation();
     });
 
@@ -18,6 +18,7 @@ $(document).ready(function() {
       $('.nav-dropdown-2').not($(this).siblings()).hide();
       e.stopPropagation();
     });
+
 
 
     // Clicking away from dropdown will remove the dropdown class
