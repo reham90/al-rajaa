@@ -120,7 +120,7 @@ $(document).ready(function() {
     });
 
    $('.dropdown').click(function(e) {
-      $('.dropdown-content').slideToggle();
+      $('.drop-mobile').slideToggle();
       // Close one dropdown when selecting another
       
       e.stopPropagation();
@@ -136,11 +136,6 @@ $("#re-show").toggle();
 $("#re-hide").css("display" ,"block");
 
 $("#cover").toggle();
-
-
-
-
-  
 
 
     });
@@ -199,11 +194,6 @@ $("#re-hide").click();
 
 
 
-
-
-
-
-
 function openCity(evt, cityName) {
   var i, tabcontent, tablinks,tabcontenttwo;
   tabcontent = document.getElementsByClassName("tab-content");
@@ -223,8 +213,25 @@ function openCity(evt, cityName) {
   evt.currentTarget.className += " active";
 }
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+if($(window).width()<991){
+   var acc = document.getElementsByClassName("accordion");
 
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function myFunction(y) {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+});
+}
+}
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -238,13 +245,13 @@ $(document).ready(function() {
     $(".close-icon").click(function() {
         $(".search-screen").removeClass("active");
     });
-});
+
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 
-$(document).ready(function() {
+
     var owl = $('.slider');
     owl.owlCarousel({
         margin: 10,
@@ -269,6 +276,8 @@ $(document).ready(function() {
 
         }
     })
+
+
 
 
 
@@ -331,29 +340,6 @@ $(document).ready(function() {
 
         }
     })
-}
-
-});
-
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-$(document).ready(function() {
-if($(window).width()<991){
-   var acc = document.getElementsByClassName("accordion");
-
-var i;
-
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function myFunction(y) {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
-    } else {
-      panel.style.display = "block";
-    }
-});
-}
 }
 
 
